@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+}
+div {
+    border: 10px solid red;
+    margin: 25px;
+}
+div p{
+    text-indent: 10px;
+    text-align: left;
+    padding: 20px;
+}
+body > div {
+    background-color: blueviolet;
+}
+div > div {
+    background-color: bisque;
+    color: red;
+}
+div > div > div {
+    background-color: rgb(102, 62, 14);
+    color: green;
+}

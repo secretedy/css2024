@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 640px;
+            margin: 25px;
+            background-color: bisque;
+        }
+        div:not(:has(img)) {
+            border: 3px dotted red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Div cu text si imagine</h1>
+        <img src="https://placehold.co/400" alt="">
+    </div>
+    <div>
+        <h1> Div cu text fara imagine</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, enim asperiores 
+            cupiditate reiciendis nisi dolor iure sint tempore, temporibus beatae 
+            velit ipsum. Velit, odit veritatis ipsa vel porro veniam voluptate.</p>
+    </div>
+    <div>
+        <img src="https://placehold.co/400" alt="">
+    </div>
+</body>
+</html>

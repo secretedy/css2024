@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 40%;
+            float: left;
+            margin: 20px;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur 
+        adipisicing elit. Dolorum, iusto! Quae, 
+        odio. Voluptate voluptatibus impedit eius
+         illum quo ullam voluptatem cum aliquam, consequatur minus
+         eos totam voluptas mollitia ipsam? Voluptatum?</p>
+    <p>Iure magni veniam expedita minima 
+        molestias sed, voluptatem eius similique
+         consectetur laborum saepe molestiae 
+         perspiciatis laboriosam est, esse neque 
+         aspernatur sint eveniet totam magnam 
+         voluptatum nesciunt modi perferendis! Eius, minus.</p>
+         <button id="btn">Schimba CSS</button>
+         <div class="div-left">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam velit, provident amet distinctio unde veniam labore eos reiciendis ratione aliquam quis laboriosam officia tempore at. Exercitationem maxime reiciendis error fugit?</p>
+            <p>Voluptatem molestiae ratione, veritatis consectetur pariatur similique, eaque quos id delectus tempora ex, dolore sapiente fugiat fugit voluptates aliquid magnam libero maxime sit voluptatibus recusandae culpa corrupti! Odio, recusandae accusamus.</p>
+            <p>Quos deserunt animi, quae rem pariatur, voluptatum exercitationem assumenda architecto nihil magnam aperiam cumque magni porro aliquam molestiae consequuntur maiores, commodi consequatur repellat blanditiis nulla. Reprehenderit repellendus quisquam aperiam dolorum.</p>
+            <p>Maxime unde tempore aspernatur rem blanditiis? Itaque quo, assumenda cumque ex rerum iure necessitatibus fuga laborum quam quas, ullam, iste voluptatum praesentium suscipit eaque repellat? Vero tempora cupiditate sint consectetur?</p>
+            <p>Quod eaque a facilis maiores, reiciendis facere aperiam architecto ab quisquam voluptatibus odit dolore molestias expedita, dolor ducimus. Ab illum omnis eveniet fugiat saepe quaerat consequatur officia sed animi non.</p>
+            <button id="btn1">Schimba CSS div stanga</button>
+         </div>
+         <div class="div-right">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis doloremque modi corrupti iure mollitia eius voluptate totam quod beatae, corporis perspiciatis, consectetur veniam quia sed maxime dolor pariatur vero ad.</p>
+            <p>Veritatis provident id dolorum nemo ut, aperiam consequuntur vero voluptas quisquam fugit! Eos, sapiente. Repellendus eveniet unde atque officia sequi laborum mollitia totam? Nostrum voluptas pariatur dolore animi explicabo dolores!</p>
+            <p>Quaerat, aperiam! Ipsum nam debitis laborum sint magni quasi numquam assumenda voluptates perspiciatis, non quo consequatur ipsa, repellendus iure quisquam temporibus doloremque dignissimos, libero voluptatibus blanditiis consequuntur? Quisquam, aperiam impedit!</p>
+            <p>Perspiciatis magnam reprehenderit nam. Accusamus, repellendus facilis expedita voluptatibus vero doloribus quaerat incidunt vel totam obcaecati. Non reiciendis ex accusamus, repellendus esse ipsam aut dolores eligendi, odit vel possimus doloremque.</p>
+            <p>Architecto exercitationem expedita placeat id? Debitis aliquam molestiae tempora, cumque dignissimos beatae neque. Fuga repellat at officiis debitis ullam illum nisi expedita, nulla sed cupiditate delectus possimus ipsum doloremque a.</p>
+            <button id="btn2">Schimba CSS div dreapta</button>
+         </div>
+
+         <div>
+            <button id="btn4">Schimba CSS Adauga class</button>
+            <button id="btn5">Schimba CSS Sterge class</button>
+            <button id="btn6">Schimba CSS Toggle class</button>
+         </div>
+
+         <script>
+            let btn = document.getElementById("btn")
+            btn.addEventListener("click", function() {
+                // let myParagraphs2 = document.getElementsByTagName(p);
+                let myParagraphs = document.querySelectorAll("body > p")
+                // for(let i = 0; i< myParagraphs.length; i++) {
+                //     myParagraphs[i].style.color= "red";
+                //     myParagraphs[i].style.fontSize= "18px";
+                // }
+            
+            myParagraphs.forEach(function(value) {
+                value.style.color= "red";
+                value.style.fontSize= "18px";
+            })
+            })
+            //method 2
+            let btn1 = document.getElementById("btn1")
+            btn1.addEventListener("click", function() {
+                let myDiv1 = document.getElementsByClassName("div-left");
+                // alert(typeof myDiv1);
+                myDiv1[0].style.cssText="color:red; "
+            })
+            //method 3
+            let btn2 = document.getElementById("btn2")
+            btn2.addEventListener("click", function() {
+                let myDiv2 = document.getElementsByClassName("div-right");
+                myDiv2[0].setAttribute("style", "color:green;")
+            })
+
+            //method 4
+            let btn4 = document.getElementById("btn4")
+            btn4.addEventListener("click", function() {
+                let myDiv2 = document.getElementsByClassName("div-right");
+                myDiv2[0].classList.add("demo");
+            });
+            let btn5 = document.getElementById("btn5")
+            btn5.addEventListener("click", function() {
+                let myDiv2 = document.getElementsByClassName("div-right");
+                myDiv2[0].classList.remove("demo");
+            });
+            let btn6 = document.getElementById("btn6")
+            btn6.addEventListener("click", function() {
+                let myDiv2 = document.getElementsByClassName("div-right");
+                myDiv2[0].classList.toggle("demo");
+            });
+         </script>
+</body>
+</html>
